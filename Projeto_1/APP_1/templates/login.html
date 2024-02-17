@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<h1 class="text-3xl flex justify-center">login</h1>
+<form method="POST" class="text-black">{% csrf_token %} 
+     {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Entrar</button>
+    <br>
+    <a href="{% url 'signup' %}">Cria conta</a>
+</form>
+{% endblock %}
+

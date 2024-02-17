@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block conteudo %}
+
+<div class="p-10 info-section bg-white rounded-lg">
+   
+    <div class="text-center">
+        <h2><strong>{{post.titulo}}</strong></h2>
+    </div>
+    <br>
+    <p style="text-align: justify;">{{post.conteudo}}</p>
+    <br>
+    <div class="text-right">
+        <small><strong>Publicado em {{post.publicacao_em}}</strong></small>
+    </div>
+    <br>
+    <small>Autor: <strong>{{post.autor}}</strong></small>
+    <br>
+</div>
+{% for comentario in post.comentarios.all %}
+<div class="p-5 info-section bg-white rounded-lg">
+    <p><strong>Comentario:</strong> {{comentario.conteudo}}</p>
+    <small><strong>Autor:</strong> {{comentario.nome}}</small>
+    <br>
+    <br>
+    <div class="text-right ">
+        <small ><strong>Data: {{comentario.publicado_em}}</strong></small>
+    </div>
+   
+</div>
+{% endfor %}
+
+{% endblock %}

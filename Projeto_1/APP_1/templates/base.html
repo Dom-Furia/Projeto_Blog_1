@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Projeto-Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+   
+</head>
+
+<body>
+    <section class="container2 p-10 info-section rounded-lg flex flex-row justify-between" >
+        <div class="flex flex-row">
+        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=190,fit=crop,q=95/AwvjG1eG4vc2ovvG/logoedux-removebg-preview-YD08znO98ESxqzXr.png" width="90px">
+        <h1 class="text-3xl font-bold pt-10">
+            Blog - CyberEdux !
+         </h1>       
+         </div>
+           <div class="flex-row justify-between pt-14 pr-2 space-x-10">
+            <a href="{% url 'login'%}" class="btn btn-primary rounded h-10">Login</a></button>
+            <a href="{% url 'login'%}" class="btn btn-secondary rounded h-10">Sair</a></button>
+           </div> 
+           
+    </section>
+        
+    <div class="container mx-auto">
+                
+        {% block conteudo %}
+        {% endblock %}
+        <div class="flex justify-center">
+            <button class="btn btn-secondary mx-1" onclick="toggleDarkMode()">Modo Noturno</button>
+        </div>
+    </div>
+  
+    <script>
+        function Login() {
+            alert('Julio Cesar');
+        }
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+    <br>
+</body>
+</html>
