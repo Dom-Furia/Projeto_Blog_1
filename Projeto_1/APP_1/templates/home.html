@@ -2,12 +2,12 @@
 {% block conteudo %}
 {% for post in posts %}
 
-<section class="my-5 p-10 info-section bg-white rounded-lg">
+<section class="my-9 p-10 info-section bg-white rounded-lg">
     <h2 class="text-2xl font-bold section-title">{{post.titulo}}</h2>
     <p>{{post.resumo}}</p>
     <small><strong>Autor: {{post.autor}}</strong></small>
     <br><br>
-    <a href="{{post.slug}}">Leia mais....</a>
+    <a href="{{post.slug}}" class="hover:text-blue-800 hover:font-bold hover:bg-yellow-200">Leia mais....</a>
     <div class="text-right mt+10 mr+2">
         <small class="font-bold"> Publicado em {{post.publicacao_em}}</small>
     </div>
