@@ -55,9 +55,9 @@ def create_post(request):
         autor = request.POST.get('autor') 
         resumo = request.POST.get('resumo') 
         slug = request.POST.get('slug')  
-        img_url = request.POST.get('img_url') 
-        publicado_em = timezone.now()
-        post = Post(titulo=titulo, conteudo=conteudo, autor=autor, resumo=resumo, slug=slug, img_url=img_url, publicado_em=publicado_em)
+        img_url = 'qqr'
+        #publicado_em = timezone.now()
+        post = Post(titulo=titulo, conteudo=conteudo, autor=autor, resumo=resumo, slug=slug, img=img_url)
         post.save()
         return redirect('home')
     return render(request, 'create_post.html')
@@ -70,7 +70,8 @@ def edit_post(request, post_id):
         post.autor = request.POST.get('autor')
         post.resumo = request.POST.get('resumo')
         post.slug = request.POST.get('slug')
-        post.img_url = request.POST.get('img_url')
+        post.img = request.POST.get('img_url')
+
         post.save()
         return redirect('home')
     else:

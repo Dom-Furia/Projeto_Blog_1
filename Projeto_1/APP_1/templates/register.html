@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block conteudo %}
-<h2 class="flex items-center text-gray-700 font-sans text-2xl font-bold bg-gray-200 ">Registro</h2>
+<h2 class="text-center p-2 text-black-700 font-sans text-2xl font-bold bg-gray-200"> Registro</h2>
 <form method="post" class="bg-gray-200 p-6 rounded-md text-black">
     {% csrf_token %}
     {% for field in form %}

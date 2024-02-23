@@ -10,12 +10,12 @@
     <br>
     <p style="text-align: justify;">{{post.conteudo}}</p>
     <br>
-    <div class="text-right">
-        <small><strong>Publicado em {{post.publicacao_em}}</strong></small>
-    </div>
-    <br>
     <small>Autor: <strong>{{post.autor}}</strong></small>
     <br>
+    <br>
+    <div class="text-right mb-0.5">
+        <small><strong> Publicado em {{post.publicacao_em}}</strong></small>
+    </div>
 </div>
 {% for comentario in post.comentarios.all %}
 <div class="p-5 info-section bg-white rounded-lg">
@@ -24,7 +24,7 @@
     <br>
     <br>
     <div class="text-right ">
-        <small ><strong>Data: {{comentario.publicado_em}}</strong></small>
+        <small ><strong>{{comentario.publicado_em}}</strong></small>
     </div>
    
 </div>
@@ -39,7 +39,8 @@
     </div>
     <input type="submit" value="Enviar" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
 </form>
+<br>
 {% else %}
-<p class="text-red-500 font-bold pb-6">Você precisa estar logado para comentar.</p>
+<p class="text-red-500 font-bold pb-6"> Você precisa estar logado para comentar.</p>
 {% endif %}
 {% endblock %}

@@ -83,9 +83,9 @@ DATABASES = {
 LOGIN_URL = 'login'
 
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-br'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Cuiaba'
 
 USE_I18N = True
 
