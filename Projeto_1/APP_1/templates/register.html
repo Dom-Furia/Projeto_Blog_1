@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 
 {% block conteudo %}
-<h2 class="text-center p-2 text-black-700 font-sans text-2xl font-bold bg-gray-200"> Registro</h2>
 <form method="post" class="bg-gray-200 p-6 rounded-md text-black">
     {% csrf_token %}
+    <h2 class="text-center text-black-700 p-4 mb-5 font-sans text-2xl font-bold"> Registro</h2>
     {% for field in form %}
     <div class="mb-4">
         <label for="{{ field.id_for_label }}" class="block text-gray-700">{{ field.label }}:</label>
